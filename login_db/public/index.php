@@ -45,8 +45,8 @@ switch ($rota) {
 }
 
 // carregamento do script permanentes
-require_once __DIR__ . '/../inc/config.php';
-require_once __DIR__ . '/../inc/database.php';
+require_once __DIR__ . "/../inc/config.php";
+require_once __DIR__ . "/../inc/database.php";
 
 // //teste
 // $database = new database();
@@ -58,6 +58,6 @@ require_once __DIR__ . '/../inc/database.php';
 
 
 //apresentao da pagina
-require_once __DIR__ . '/../inc/header.php';
-require_once __DIR__ . '/../scripts/' . $script;
-require_once __DIR__ . '/../inc/footer.php';
+require_once __DIR__ . "/../inc/header.php";
+require_once __DIR__ . "/../scripts/$script";
+require_once __DIR__ . "/../inc/footer.php";

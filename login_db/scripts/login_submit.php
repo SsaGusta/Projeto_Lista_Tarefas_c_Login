@@ -19,12 +19,12 @@ if (empty($usuario) || empty($senha)) {
 // a class da bd ja esta carregada no index.php
 $database = new database();
 $params = [
-    ':usuario' => $usuario,
-    ':senha' => $senha
+    ':usuario' => $usuario
 ];
 
 $sql = 'SELECT * FROM users WHERE usuario = :usuario';
 $result = $database->query($sql, $params);
+var_dump($result);
 
 
 //verifica se aconteceu algum erro
