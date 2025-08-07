@@ -1,9 +1,26 @@
+<?php if (isset($_SESSION['erro'])): ?>
+    <div class="alert alert-danger">
+        <?= $_SESSION['erro'];
+        unset($_SESSION['erro']); ?>
+    </div>
+<?php endif; ?>
+
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-4">
             <div class="card bg-light p-5 shadow-mt-5">
                 <h3>Login</h3>
                 <hr>
+                <?php if (isset($_SESSION['erro'])): ?>
+                    <div class="alert alert-danger">
+                        <?= htmlspecialchars($_SESSION['erro']) ?>
+                    </div>
+                <?php
+                    unset($_SESSION['erro']);
+                    unset($_SESSION['erro_tipo']);
+                endif; ?>
+
                 <form action="?rota=login_submit" method="post">
                     <div class="mb-3">
                         <label for="text_usuario" class="form-label">Usuário</label>
