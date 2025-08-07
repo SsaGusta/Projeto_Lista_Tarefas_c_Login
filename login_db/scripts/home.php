@@ -2,4 +2,3 @@
     <h4>HOME</h4>
 </div>
 <?php
-var_dump($_SESSION);
